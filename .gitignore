@@ -4,6 +4,9 @@
 /node_modules
 /.pnp
 .pnp.js
+/.history
+/.vscode
+/.lh
 
 # testing
 /coverage

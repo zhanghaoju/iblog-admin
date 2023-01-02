@@ -15,14 +15,14 @@ const TopHeader = (props: any) => {
   };
   // 获取登录信息
   const handQuit = () => {
-    // console.log("点击退出");
-    // 清空redux数据
-    props.BlogActions.asyncLoginOutAction()
-    // 清空token
-    localStorage.removeItem('token')
-    message.success("退出登录成功")
-    // 跳转到登录页面
-    props.history.push('/admin/login')
+    props.BlogActions.asyncLoginOutAction().then(() => {
+      // 清空token
+      localStorage.removeItem('token')
+      message.success("退出登录成功")
+      // 跳转到登录页面
+      props.history.push('/admin/login')
+    })
+
   }
   const items: MenuProps['items'] = [
     {

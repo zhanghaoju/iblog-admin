@@ -15,8 +15,10 @@ const api = {
   Login(params: any) {
     return axios.post(`${baseURL}/admin/login`, params);
   },
-  // 注册
-
+  // 退出登录
+  loginOut() {
+    return axios.post(`${baseURL}/admin/logout`);
+  },
   // 获取分类列表
   getCategories(page: any, pageSize: any, name: any) {
     return axios.get(`${baseURL}/categories?page=${page}&&pageSize=${pageSize}&&name=${name}`);

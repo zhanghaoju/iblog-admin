@@ -1,5 +1,7 @@
 // 登录
 export const USER_LOGIN = 'USER_LOGIN';
+// 退出登录
+export const LOGINOUT = 'LOGINOUT';
 // 侧边栏的显示与隐藏
 export const CHANGE_COLLAPSED = 'CHANGE_COLLAPSED';
 // loading

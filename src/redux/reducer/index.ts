@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import { LoginReducer } from './login';
+import { LoginOutReducer } from './login/loginout';
 import { SideMenuStateReducer } from './collapsed';
 import { LoadingReducer } from './loading';
 import { CategoriesReducer } from './categories/list';
@@ -30,6 +31,7 @@ import { ArticleCollectUpdateReducer } from './articles/article_collect';
 import { FileUploadReducer } from './upload/index';
 const RootReducer = combineReducers({
   LoginReducer,
+  LoginOutReducer,
   SideMenuStateReducer,
   LoadingReducer,
   CategoriesReducer,

@@ -2,6 +2,7 @@ import { message } from 'antd';
 import api from '@/api';
 import {
   USER_LOGIN,
+  LOGINOUT,
   CHANGE_COLLAPSED,
   CATEGORY_LIST,
   CATEGORY_ADD,
@@ -55,9 +56,10 @@ export function asyncLoginAction(data: any) {
 // 登出
 export const asyncLoginOutAction = () => {
   return async (dispatch: any) => {
+    const res = await api.loginOut();
     dispatch({
-      type: '',
-      userinfo: '',
+      type: LOGINOUT,
+      userinfo: res,
     });
   };
 };

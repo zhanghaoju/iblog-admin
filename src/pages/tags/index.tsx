@@ -143,7 +143,7 @@ const ArticleTag = (props: any) => {
   }
   const columns: ColumnsType<DataType> = [
     {
-      title: '标签名称',
+      title: '标签名称(点击可编辑)',
       dataIndex: 'name',
       key: 'name',
       onCell: (record: DataType) => ({
@@ -194,7 +194,7 @@ const ArticleTag = (props: any) => {
           <Button type="primary" danger shape="circle" icon={
             <DeleteOutlined />} onClick={() => {
               TagDelete(item)
-            }} style={{ marginRight: '5px' }} disabled={!item.status} />
+            }} style={{ marginRight: '5px' }} disabled={item.status} />
         </div>
       }
     },

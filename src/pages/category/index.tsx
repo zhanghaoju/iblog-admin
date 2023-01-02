@@ -144,7 +144,7 @@ const ArticleCategory = (props: any) => {
   }
   const columns: ColumnsType<DataType> = [
     {
-      title: '分类名称',
+      title: '分类名称(点击可编辑)',
       dataIndex: 'name',
       key: 'name',
       onCell: (record: DataType) => ({

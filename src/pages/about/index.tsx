@@ -53,10 +53,7 @@ const About = (props: any) => {
   // 点击刷新时重新调用接口
   const onRefresh = () => {
     setIsReFresh(true)
-    // 如果为true
-    if (isReFresh) {
-      message.success('刷新成功')
-    }
+    message.success('刷新成功')
     props.BlogActions.asyncAboutListAction().then((res: any) => {
       // 将值设置进表单数据中
       form.setFieldsValue(res.data)
